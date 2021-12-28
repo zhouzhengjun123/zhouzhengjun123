@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .login-box{
+            width: 300px;
+            height:200px;
+            margin:20px auto;
+            background-color: cyan;
+            border:dashed;
+        }
+        .w1{
+            display: inline-block;
+            width:3em;
+            text-align-last: justify;
+        }
+        hr{
+            width: 270px;
+        }
+        input{
+            border-style: none;
+        }
+        .w2{
+            border-style: solid;
+            background-color: white;
+        }
+        .center{
+            width:100px;
+            margin:10px auto;
+        }
+       
+    </style>
+    <link rel="stylesheet" href="./sy_font/sy3-5/iconfont.css">
+</head>
+<body>
+    <div class="login-box">
+        <h1>用户登录</h1>
+        <hr>
+        <form>
+            <div class="user-box">
+                <span class="w1">用户名</span>:
+                <span class="w2">
+                    <i class="iconfont">&#xe788;</i>
+                    <input type="text">
+                </span>
+            <br>
+            <br>
+            <div class="pwd-box">
+                <span class="w1">密码</span>:
+                <span class="w2">
+                    <i class="iconfont">&#xe600;</i>
+                    <input type="password">
+                </span>
+            </div>
+            <div class="center">
+                <button>登录</button>
+                <button>注册</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./iconfont/font_3061968_r0eeyfkxc2c/iconfont.css">
+    <style>
+        .backimage{
+            position:absolute;
+            top:0px;
+            width:100%;
+            height: 100%; 
+            background-image: linear-gradient(to bottom, rgb(86, 71, 117), #000, #000);
+        }
+        .image{
+            position:absolute;
+            width:100%;
+            height: 100%;
+            background-image: url("./images/背景.png");
+            background-size: cover;
+            background-repeat: repeat;
+        }
+        .shell{
+            background-color: rgb(86, 71, 117);
+            position: absolute;
+            top:17px;
+            width: 1px;
+            height: 700px;
+            transition: .3s;
+            overflow: hidden;
+        }
+        a{
+            display: block;
+            width:85%;
+            margin:9px;
+            border-radius: 5px;
+            position: relative;
+            transition: .3s;
+            text-decoration: none;
+            color:rgb(129, 126, 126)
+        }
+        span{
+            line-height: 91px;
+        }
+        .shell:hover{
+            width: 100px;
+            height: 700px;
+            border-radius: 10px;
+        }
+        a:hover{
+            color:#fff
+        }
+        #outer{
+            width: 1000px;
+            height: 550px;
+            background-color: #fff;
+            position: absolute;
+            top:100px;
+            left:500px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .box1{
+            position: absolute;
+            top:3px;
+            left:3px;
+            width: 99%;
+            height: 99%;
+            border-radius: 5px;
+            z-index: 1;
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+        }
+        .box2{
+            background-color: aqua;
+            position: absolute;
+            top:3px;
+            left:3px;
+            width: 99%;
+            height: 99%;
+            border-radius: 5px;
+            z-index: 0;
+        }
+        .box3{
+            background-color: aqua;
+            position: absolute;
+            top:3px;
+            left:3px;
+            width: 99%;
+            height: 99%;
+            border-radius: 5px;
+            z-index: 0;
+        }
+        .box4{
+            background-color: aqua;
+            position: absolute;
+            top:3px;
+            left:3px;
+            width: 99%;
+            height: 99%;
+            border-radius: 5px;
+            z-index: 0;
+        }
+        .box5{
+            background-color: aqua;
+            position: absolute;
+            top:3px;
+            left:3px;
+            width: 99%;
+            height: 99%;
+            border-radius: 5px;
+            z-index: 0;
+        }
+        .button1{
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top:15%;
+            left:20%
+        }
+        .button2{
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top:30%;
+            left:20%
+        }
+        .button3{
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top:45%;
+            left:20%
+        }
+        .button4{
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top:60%;
+            left:20%
+        }
+        .button5{
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top:75%;
+            left:20%
+        }
+        input{
+            width: 150px;
+            height: 60px;
+            color:#fff;
+            font-size: 20px;
+            background-color:rgb(86, 71, 117); 
+            border-radius: 10px;
+        }
+        input:hover{
+            background-color:rgb(14, 204, 230);
+            transition: .3s;
+        }
+        .text{
+            font-size: 32px;
+            width: 12em;
+            position: absolute;
+            top:0;
+            left:40%;
+            color:rgb(153, 10, 81)
+        }
+        img{
+            margin:5px;
+        }
+        .w1{
+            display:inline-block;
+            width:4em;
+            text-align-last: justify;
+        }
+        .box2>.data{
+            margin:5px 10px;
+            line-height: 25px;
+            position: absolute;
+            top:0px;
+            left:450px;
+            font-size:30px;
+        }
+        .box3>ul>li{
+            margin: 0px;
+            padding:0px;
+            height: 20px;
+        }
+        .box3>ul>li>span{
+            margin: 0px;
+            padding:0px;
+            line-height: 40px;
+        }
+        .box3>ul>span{
+            margin: 0px;
+            padding:0px;
+            background-color: tomato;
+        }
+        ul>img{
+            width: 65px;
+            margin: 0px;
+            padding: 0px;
+            position: absolute;
+            top:55px;
+            left:120px;
+        }
+        .box4>.data{
+            margin:5px 10px;
+            line-height: 25px;
+            position: absolute;
+            top:0px;
+            left:50px;
+            font-size:30px;
+        }
+        .box5>.data{
+            margin:5px 10px;
+            line-height: 25px;
+            position: absolute;
+            top:0px;
+            left:50px;
+            font-size:30px;
+        }
+        embed{
+            position: absolute;
+            top:75%;
+            left:80%
+
+        }
+    </style>
+    <script>
+        var x = 2;
+        function on1(){
+            var b1 = document.getElementById("b1");
+            b1.style.zIndex = x
+            x++
+        }
+        function on2(){
+            var b1 = document.getElementById("b2");
+            b1.style.zIndex = x
+            x++
+        }
+        function on3(){
+            var b1 = document.getElementById("b3");
+            b1.style.zIndex = x
+            x++
+        }
+        function on4(){
+            var b1 = document.getElementById("b4");
+            b1.style.zIndex = x
+            x++
+        }
+        function on5(){
+            var b1 = document.getElementById("b5");
+            b1.style.zIndex = x
+            x++
+        }
+    </script>
+</head>
+<body>
+    <div class="backimage">
+        <div class="image"></div>
+    </div>
+    <div class="shell">
+        <a href="./index-sy1.html">
+            <i class="iconfont">&#xe607;</i>
+            <span>实验一</span>
+        </a>
+        <a href="./index-sy2.html">
+            <i class="iconfont">&#xe608;</i>
+            <span>实验二</span>
+        </a>
+        <a href="./index-sy3.html">
+            <i class="iconfont">&#xe609;</i>
+            <span>实验三</span>
+        </a>
+        <a href="./index-sy4.html">
+            <i class="iconfont">&#xe613;</i>
+            <span>实验四</span>
+        </a>
+        <a href="./sy_html/sy5.html">
+            <i class="iconfont">&#xe62c;</i>
+            <span>实验五</span>
+        </a>
+        <a href="./sy_html/sy6.html">
+            <i class="iconfont">&#xe62d;</i>
+            <span>实验六</span>
+        </a>
+        <a href="./index-sy7.html">
+            <i class="iconfont">&#xe62e;</i>
+            <span>实验七</span>
+        </a>
+    </div>
+    <div id="outer">
+        <div class="box1" id="b1">
+            <iframe src="//player.bilibili.com/player.html?aid=3327562&bvid=BV1Us411d71V&cid=54951977&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+        </div>
+        <div class="box2" id="b2">
+            <div class="image1"><img src="./images/zzj.jpg" alt="大头照"></div>
+            <div class="data">
+                <ul>
+                    <li><span class="w1">名字</span>：周政军</li>
+                    <li><span class="w1">学校</span>：华东交通大学</li>
+                    <li><span class="w1">专业</span>：数据科学与大数据技术</li>
+                    <li><span class="w1">年级</span>：2019级</li>
+                    <li><span class="w1">年龄</span>：20</li>
+                    <li><span class="w1">体重</span>：80KG</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box3" id="b3">
+            <ul>
+                <li><span class="w2">喜欢玩英雄联盟；喜欢看职业比赛，最喜欢的战队是--WE</span></li>
+                <img src="./images/战队头像.webp" alt="WE战队logo">
+                <span >&nbsp;&nbsp;&nbsp;&nbsp;（战队logo）</span>
+                <li><span class="w2">喜欢打乒乓球和台球，尽管不太会打</span></li>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;实在是太难了</span>
+                <li><span class="w2">喜欢追剧和看电影，各种类型的都看</span></li>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;最喜欢的电影是《这个杀手不太冷》</span>
+                <li><span class="w2">喜欢听民谣，当然其他类型好听的歌也能接受</span></li>      
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;最喜欢的歌是《夜空中最亮的星》</span>
+                <li><span class="w2">喜欢上B站看美食区视频、鬼畜区视频、汽车区视频、和科技知识区视频</span></li>
+                <span>&nbsp;&nbsp;&nbsp;&nbsp;最喜欢的up主是“伊丽莎白鼠”</span>
+            </ul>
+        </div>
+        <div class="box4" id="b4">
+            <div class="data">
+                <ul>
+                    <li><span class="w1">名字</span>：周政军</li>
+                    <li><span class="w1">Q Q</span>：2501994351</li>
+                    <li><span class="w1">邮箱</span>：2501994351@qq.com</li>
+                    <li><span class="w1">电话</span>：15273319223</li>
+                    <li style="color:red"><span class="w1" style="color:red">注意</span>：实验的链接将鼠标滑动到页面的最左边</li>
+                    <li style="color:red"><span class="w1" style="color:red">建议</span>：用火狐浏览器访问没有问题</li>
+                </ul>
+            </div>
+        </div>
+        <div class="box5" id="b5">
+            <div class="data">
+                <ul>
+                    <li><span class="w1">程序语言</span>：会一点Python和数据库SQL，正在学C和JS</li>
+                    <li><span class="w1">专业</span>：会一点机器学习，正在往深度学习方面学习</li>
+                    <li><span class="w1">学习计划</span>：准备考研，以后主要为考研做准备</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="button1">
+        <input type="button" value="视频" onclick="on1()"/>
+    </div>
+    <div class="button2">
+        <input type="button" value="介绍" onclick="on2()"/>
+    </div>
+    <div class="button3">
+        <input type="button" value="爱好" onclick="on3()"/>
+    </div>
+    <div class="button4">
+        <input type="button" value="联系" onclick="on4()"/>
+    </div>
+    <div class="button5">
+        <input type="button" value="学习" onclick="on5()"/>
+    </div>
+    <div class="text">
+        弃我去者，昨日之日不可留
+    </div>
+    <embed src="./images/夜空中最亮的星.mp3"/>
+</body>
+</html>
